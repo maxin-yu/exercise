@@ -1,0 +1,15 @@
+#include<stdio.h>
+int f(int a,int b)
+{
+   if(a%b==0)
+	   return b;
+   else  return f(b,a%b);
+}
+int main()
+{
+	int a,b,t;  
+    scanf("%d%d",&a,&b);t=a;
+	if(a<b){ a=b;b=t;}
+	 printf("%d\n",f(a,b));
+	return 0;
+}
