@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+int a[3];
+int n;
+int s[3];
+int i,t;
+int r=1;
+printf("请输入三个整数：\n");
+for(i=0;i<3;i++){
+scanf("%d",&a[i]);
+}
+s[0] = a[1]-a[0];
+s[1] = a[2]-a[1];
+s[2] = a[2]-a[0];
+while(r!=0){
+r=s[0]%s[1];
+if(r==0){
+break;
+}
+s[0]=s[1];s[1]=r;
+}
+t=s[1];
+r=1;
+while(r!=0){
+r=s[2]%t;
+if(r==0){
+break;
+}
+s[2]=t;t=r;
+}
+if(t<0){
+t=-t;
+}
+printf("%d",t);
+return 0;
+ }
