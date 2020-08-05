@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int x1,x2,x3,y1,y2,y3;
+	int m1,m2,n1,n2,k;
+	scanf("%d %d %d %d %d %d",&x1,&y1,&x2,&y2,&x3,&y3);
+	m1 = x1-x2;
+	m2 = y1-y2;
+	n1 = x1-x3;
+	n2 = y1-y3;
+	k=m1*n2-m2*n1;
+	if(k>0){
+		printf("三角形ABC逆时针\n"); 
+	}
+	if(k<0){
+			printf("三角形ABC顺时针\n"); 
+	}
+	if(k==0){
+		printf("三点共线\n"); 
+	} 
+	
+	return 0;
+}
