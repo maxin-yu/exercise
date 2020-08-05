@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h> 
+#define M 3 
+int powmod(int n, int p)
+{
+	if(p==1){
+		return n%M;
+	}
+	int temp,result;
+	temp = pow(n,p/2);
+	result = (temp*temp)%M;
+	if(p%2==1){
+		result = (result*n)%M;
+	} 
+	return result;
+}
+int main ()
+{ 
+	int n,m,p;
+	int result;
+	printf("请输入一个整数n以及次方p:\n");
+	scanf("%d%d",&n,&p);
+	result  = powmod(n,p);
+	printf("%d",result);
+	return 0;
+ }
