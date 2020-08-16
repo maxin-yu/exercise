@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(void){
+	int n,i,j=0,k,a[10],s,c=0,sum=0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	scanf("%d",&a[i]);
+	scanf("%d",&k);
+	for(i=0;i<n-k;i++){
+		s=0;
+		for(j=i;j<i+k;j++)
+{
+	s=s+a[j];
+	}	
+	if(s>sum)  sum=s;
+	}
+	printf("%.2f",1.0*sum/k);
+	return 0;
+}
