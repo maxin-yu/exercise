@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int n;
+	int i,j;
+	int c = 0;
+	int a[1000];
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	for(i=0;i<n;i++){
+		 c=1;
+		if(a[i] != -1){
+		for(j=i+1;j<n;j++){
+			if(a[j]==a[i]){
+				a[j]= -1;
+				c++;
+			}
+		}
+			if(c>n/3){
+				printf("%4d",a[i]);
+			}
+	}
+}
+	
+	return 0;
+ }
